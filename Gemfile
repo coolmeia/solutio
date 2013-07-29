@@ -13,6 +13,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'simple_form', git: 'git@github.com:plataformatec/simple_form.git'
+gem 'responders', git: 'git@github.com:plataformatec/responders.git'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

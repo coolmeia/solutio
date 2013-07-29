@@ -1,4 +1,11 @@
 GIT
+  remote: git@github.com:plataformatec/responders.git
+  revision: 6b57da9efb85c79157434a85c1bc34b2b4231aaa
+  specs:
+    responders (1.0.0.rc)
+      railties (>= 3.2, < 5)
+
+GIT
   remote: git@github.com:plataformatec/simple_form.git
   revision: 87323fd625802f3aea7fd7d8a2fd64016b18cdaa
   specs:
@@ -122,6 +129,7 @@ DEPENDENCIES
   jquery-rails
   pg
   rails (= 4.0.0)
+  responders!
   sass-rails (~> 4.0.0)
   sdoc
   simple_form!
