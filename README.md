@@ -1,6 +1,6 @@
 # Solutio
 
-Your idea - Our solution... Cooperation is the new revolution!
+Your idea - Our solutions. Cooperation is the new revolution!
 
 Join people with same ideas as you.
 
@@ -48,6 +48,6 @@ Solutio can be used as three different things:
 
 ## License
 
-Solutio is released under the Attribution-NonCommercial-ShareAlike 3.0 Unported. 
+Solutio is released under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported and Move Commons Non-Profit, Reproducible, Reinforcing Other Aims, Grassroots.
 
 
