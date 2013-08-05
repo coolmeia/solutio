@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/anjlab/bootstrap-rails.git
+  revision: 3a475ea827ad5128a332d06a4d43498daae16a8c
+  branch: 3.0.0
+  specs:
+    anjlab-bootstrap-rails (3.0.0.rc1)
+      railties (>= 3.0)
+      sass (>= 3.2)
+
+GIT
   remote: git@github.com:plataformatec/responders.git
   revision: 6b57da9efb85c79157434a85c1bc34b2b4231aaa
   specs:
@@ -147,6 +156,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  anjlab-bootstrap-rails!
   coffee-rails (~> 4.0.0)
   devise
   jbuilder (~> 1.2)

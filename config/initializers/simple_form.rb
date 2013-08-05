@@ -1,3 +1,14 @@
+# Customizations
+require "#{Rails.root}/lib/customizations/simple_form/wrapped_button"
+
+SimpleForm::FormBuilder.send :include, WrappedButton
+
+# Adding 'form-control' class to inputs
+SimpleForm::Inputs::StringInput.send   :include, BootstrapInputClass
+SimpleForm::Inputs::PasswordInput.send :include, BootstrapInputClass
+
+# Configurations
+
 # Use this setup block to configure all options available in SimpleForm.
 SimpleForm.setup do |config|
   # Wrappers are used by the form builder to generate a
