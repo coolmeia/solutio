@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <% if user_signed_in? %>
+    <h1>Welcome <%= current_user.name %>!</h1>
+
+    <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => 'btn btn-large btn-danger' %>
+  <% else %>
+    <h1>Welcome!</h1>
+
+    <p class="lead">
+      You must sign in to like, see, and create solutions..
+    </p>
+
+    <div class="row">
+      <div class="col-lg-1">
+        <%= link_to "Sign In", new_user_session_path, :class => "btn btn-success" %>
+      </div>
+
+      <div class="col-lg-1">
+        <%= link_to "Sign Up", new_user_registration_path, :class => "btn btn-success" %>
+      </div>
+    </div>
+  <% end %>
+</div>
