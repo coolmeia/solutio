@@ -25,6 +25,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'factory_girl_rails'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'pry'
@@ -32,4 +34,7 @@ end
 
 group :test do
   gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'turnip'
 end
