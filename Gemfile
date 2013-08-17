@@ -16,8 +16,8 @@ gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
 
 gem 'jbuilder', '~> 1.2'
 
-gem 'simple_form', git: 'git@github.com:plataformatec/simple_form.git'
-gem 'responders', git: 'git@github.com:plataformatec/responders.git'
+gem 'simple_form', git: 'https://github.com/plataformatec/simple_form.git'
+gem 'responders', git: 'https://github.com/plataformatec/responders.git'
 gem 'devise'
 
 group :doc do
