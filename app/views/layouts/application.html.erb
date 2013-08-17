@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="navbar">
+    <div class="container">
+      <%= link_to "Solutio", root_path, class: 'navbar-brand' %>
+      <%= render 'layouts/user_header' %>
+    </div>
+  </div>
 
-<%= yield %>
-
+  <div class="container">
+    <%= bootstrap_flash %>
+    <%= yield %>
+  </div>
 </body>
 </html>
