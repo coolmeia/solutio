@@ -1,4 +1,5 @@
 # Solutio
+[![Build Status](https://travis-ci.org/coolmeia/solutio.png?branch=master)](https://travis-ci.org/coolmeia/solutio)  
 
 Your idea - Our solutions. Cooperation is the new revolution!
 
