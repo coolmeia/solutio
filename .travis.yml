@@ -1,0 +1,20 @@
+language: ruby
+
+rvm:
+  - 2.0.0
+
+bundler_args: --without development
+
+env: DB=postgres
+
+before_script:
+  - cp config/database.sample.yml config/database.yml
+  - psql -c 'create role solutio SUPERUSER LOGIN;' postgres
+  - RAILS_ENV=test bundle exec rake db:create db:migrate
+
+script:
+  - bundle exec rspec spec/models
+  - bundle exec rspec spec/acceptance
+
+notifications:
+  irc: irc.freenode.org#solutio
