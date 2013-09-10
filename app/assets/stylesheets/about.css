@@ -1,0 +1,10 @@
+.icons p {
+  font-weight: bold;
+  text-align: center;
+}
+
+.icons span {
+  font-size: 500%;
+  display: block;
+  margin-bottom: 10px;
+}

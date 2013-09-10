@@ -1,13 +1,4 @@
 GIT
-  remote: git://github.com/anjlab/bootstrap-rails.git
-  revision: 3a475ea827ad5128a332d06a4d43498daae16a8c
-  branch: 3.0.0
-  specs:
-    anjlab-bootstrap-rails (3.0.0.rc1)
-      railties (>= 3.0)
-      sass (>= 3.2)
-
-GIT
   remote: https://github.com/plataformatec/responders.git
   revision: 6b57da9efb85c79157434a85c1bc34b2b4231aaa
   specs:
@@ -49,6 +40,9 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
+    anjlab-bootstrap-rails (3.0.0.2)
+      railties (>= 3.0)
+      sass (>= 3.2)
     arel (4.0.0)
     atomic (1.1.10)
     bcrypt-ruby (3.1.1)
@@ -191,7 +185,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  anjlab-bootstrap-rails!
+  anjlab-bootstrap-rails (~> 3.0.0.2)
   capybara
   capybara-webkit
   coffee-rails (~> 4.0.0)
