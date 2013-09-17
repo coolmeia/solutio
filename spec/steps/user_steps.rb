@@ -26,7 +26,7 @@ module UserSteps
   end
 
   step "I sign in" do
-    click_link 'Sign In'
+    click_link 'Sign in'
 
     fill_in 'Email',    :with => 'cajueiro@coolmeia.org'
     fill_in 'Password', :with => '12345678'
