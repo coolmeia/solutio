@@ -1,0 +1,13 @@
+<h1><%= t("solution.index.title") %></h1>
+
+<% if user_signed_in? %>
+  <p>
+    <%= link_to t(:new_solution), new_solution_path, class: "btn btn-primary" %>
+  </p>
+<% end %>
+
+<% @solutions.each do |solution| %>
+  <p>
+    <%= link_to solution.name, solution %>
+  </p>
+<% end %>
