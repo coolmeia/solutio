@@ -4,6 +4,9 @@ gem 'rails', '4.0.0'
 
 gem 'pg'
 
+# heroku webserver
+gem 'unicorn'
+
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -24,6 +27,10 @@ group :doc do
 end
 
 gem 'factory_girl_rails'
+
+group :production do
+  gem 'rails_12factor', '~> 0.0.2'
+end
 
 group :development, :test do
   gem 'rspec-rails'
