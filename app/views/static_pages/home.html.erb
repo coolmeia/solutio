@@ -1,23 +1,20 @@
-<div class="jumbotron">
-  <% if user_signed_in? %>
-    <h1>Welcome <%= current_user.name %>!</h1>
+<div class="jumbotron row">
+  <div class="col-md-6">
+    <h1>Your idea, our solutions</h1>
 
-    <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => 'btn btn-large btn-danger' %>
-  <% else %>
-    <h1>Welcome!</h1>
-
-    <p class="lead">
-      You must sign in to like, see, and create solutions..
+    <p>
+      Connect with people <br>
+      with same ideas as you.
     </p>
 
-    <div class="row">
-      <div class="col-lg-1">
-        <%= link_to "Sign In", new_user_session_path, :class => "btn btn-success" %>
-      </div>
+    <p>
+      Make the difference, start now.
+    </p>
 
-      <div class="col-lg-1">
-        <%= link_to "Sign Up", new_user_registration_path, :class => "btn btn-success" %>
-      </div>
-    </div>
-  <% end %>
+    <%= link_to "Sign Up", new_user_registration_path, :class => "btn btn-success" %>
+  </div>
+
+  <div class="col-md-6">
+    <iframe src="//player.vimeo.com/video/73585798?title=0&amp;byline=0&amp;portrait=0" width="495" height="371" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </div>
 </div>
