@@ -13,3 +13,14 @@ require 'devise'
 require 'devise/orm/active_record'
 
 require 'shoulda-matchers'
+
+# EnumerateIt
+require 'enumerate_it'
+
+class ActiveRecord::Base
+  extend EnumerateIt
+end
+
+Dir['app/enumerations/*.rb'].each do |file|
+  require File.expand_path(file)
+end

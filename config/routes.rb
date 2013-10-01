@@ -5,6 +5,8 @@ Solutio::Application.routes.draw do
 
   get '/about' => 'static_pages#about'
 
+  resources :solutions
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
