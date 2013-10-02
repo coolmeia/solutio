@@ -38,14 +38,6 @@ module UserSteps
     expect(page).to have_content "Signed in successfully."
   end
 
-  step "I'm logged in" do
-    user = FactoryGirl.create(:cajueiro)
-
-    login_as(user, :scope => :user, :run_callbacks => false)
-
-    step "I'm in the root page"
-  end
-
   step "I sign out" do
     click_link 'Sign Out'
   end

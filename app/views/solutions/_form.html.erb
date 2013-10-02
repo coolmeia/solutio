@@ -1,0 +1,6 @@
+<%= simple_form_for @solution do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description, input_html: { class: "form-control" } %>
+  <%= f.input :category, :as => :select, :collection => SolutionCategory.to_a, input_html: { class: "form-control" }  %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>

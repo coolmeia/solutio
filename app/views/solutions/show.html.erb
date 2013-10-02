@@ -1,0 +1,13 @@
+<h1><%= @solution.name %></h1>
+
+<p>
+  <strong>Category:</strong> <%= @solution.category_humanize %>
+</p>
+
+<div>
+  <%= @solution.description %>
+</div>
+
+<% if @solution.user == current_user %>
+  <%= link_to t("edit"), [:edit, @solution] %>
+<% end %>

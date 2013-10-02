@@ -1,0 +1,13 @@
+en:
+  enumerations:
+    solution_category:
+      food: Food
+      environment: Environment
+      man_and_his_things: Man and his things
+      communities: Communities
+      economy: Economy
+      education_and_culture: Education & culture
+      energy: Energy
+      networks_communication_mobility: Networks, communication & mobility
+      health_happines_wellbeing: Health, happines & wellbeing
+      other: Other
