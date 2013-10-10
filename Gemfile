@@ -22,6 +22,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'simple_form', git: 'https://github.com/plataformatec/simple_form.git'
 gem 'responders', git: 'https://github.com/plataformatec/responders.git'
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
