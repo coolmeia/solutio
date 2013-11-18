@@ -1,0 +1,11 @@
+<%= f.input :name %>
+<%= f.input :description, input_html: { class: "form-control" } %>
+<%= f.input :category, :as => :select, :collection => SolutionCategory.to_a, input_html: { class: "form-control" }  %>
+
+<div id="photos">
+  <%= f.simple_fields_for :photos do |photo| %>
+    <%= render 'photo_fields', :f => photo %>
+  <% end %>
+
+  <%= link_to_add_association 'add photo', f, :photos %>
+</div>
