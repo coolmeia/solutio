@@ -12,6 +12,16 @@ module SolutionSteps
     fill_in 'Description', :with => 'How to clear your own water'
     select 'Food', :from => 'Category'
 
+    click_on "add photo"
+
+    file_field = all(".nested-fields input.file[type='file']").first["name"]
+    attach_file file_field, "#{Rails.root}/spec/files/queremos-voce.jpg"
+
+    click_on "add photo"
+
+    file_field = all(".nested-fields input.file[type='file']").last["name"]
+    attach_file file_field, "#{Rails.root}/spec/files/acolhimento-aqui-comeca.jpg"
+
     click_on "Create Solution"
   end
 
@@ -20,6 +30,11 @@ module SolutionSteps
 
     expect(page).to have_content "Clean water"
     expect(page).to have_content "Category: Food"
+
+    # WTF? but works =/
+    sleep 3
+    expect(page).to have_xpath("//img[@src = '/uploads/photo/image/#{Photo.first.id}/queremos-voce.jpg']")
+    expect(page).to have_xpath("//img[@src = '/uploads/photo/image/#{Photo.last.id}/acolhimento-aqui-comeca.jpg']")
   end
 
   step 'I have a solution' do

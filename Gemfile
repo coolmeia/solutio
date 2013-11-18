@@ -12,6 +12,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
+gem 'cocoon'
+
+gem 'carrierwave'
+
 gem 'enumerate_it', :git => 'https://github.com/cassiomarques/enumerate_it.git'
 
 gem 'anjlab-bootstrap-rails', '~> 3.0.0.2', :require => 'bootstrap-rails'
@@ -35,6 +39,10 @@ group :production do
   gem 'rails_12factor', '~> 0.0.2'
 end
 
+group :development do
+  gem 'quiet_assets'
+end
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'pry'
@@ -44,5 +52,7 @@ group :test do
   gem 'shoulda-matchers'
   gem 'capybara'
   gem 'capybara-webkit'
+  gem 'launchy'
+  gem 'capybara-screenshot'
   gem 'turnip'
 end

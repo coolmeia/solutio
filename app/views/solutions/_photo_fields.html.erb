@@ -1,0 +1,10 @@
+<div class="nested-fields">
+  <%= f.input_field :image, :as => :file %>
+  <%= f.input :image_cache, :as => :hidden %>
+
+  <% if f.object.image? %>
+    <%= link_to f.object.image_identifier, f.object.image_url, :target => '_blank' %>
+  <% end %>
+
+  <%= link_to_remove_association "remove photo", f %>
+</div>

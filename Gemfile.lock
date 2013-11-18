@@ -47,6 +47,7 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
+    addressable (2.3.5)
     anjlab-bootstrap-rails (3.0.0.2)
       railties (>= 3.0)
       sass (>= 3.2)
@@ -60,9 +61,16 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-screenshot (0.3.13)
+      capybara (>= 1.0, < 3)
     capybara-webkit (1.0.0)
       capybara (~> 2.0, >= 2.0.2)
       json
+    carrierwave (0.9.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+    cocoon (1.2.1)
     coderay (1.0.9)
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
@@ -103,6 +111,8 @@ GEM
     jwt (0.1.8)
       multi_json (>= 1.5)
     kgio (2.8.0)
+    launchy (2.3.0)
+      addressable (~> 2.3)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -135,6 +145,8 @@ GEM
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
+    quiet_assets (1.0.2)
+      railties (>= 3.1, < 5.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -224,17 +236,22 @@ PLATFORMS
 DEPENDENCIES
   anjlab-bootstrap-rails (~> 3.0.0.2)
   capybara
+  capybara-screenshot
   capybara-webkit
+  carrierwave
+  cocoon
   coffee-rails (~> 4.0.0)
   devise
   enumerate_it!
   factory_girl_rails
   jbuilder (~> 1.2)
   jquery-rails
+  launchy
   omniauth
   omniauth-facebook
   pg
   pry
+  quiet_assets
   rails (= 4.0.0)
   rails_12factor (~> 0.0.2)
   responders!
