@@ -15,6 +15,7 @@ gem 'jquery-rails'
 gem 'cocoon'
 
 gem 'carrierwave'
+gem "fog", "~> 1.3.1"
 
 gem 'enumerate_it', :git => 'https://github.com/cassiomarques/enumerate_it.git'
 
