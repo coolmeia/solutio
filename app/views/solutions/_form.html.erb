@@ -1,6 +1,21 @@
-<%= simple_form_for @solution do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description, input_html: { class: "form-control" } %>
-  <%= f.input :category, :as => :select, :collection => SolutionCategory.to_a, input_html: { class: "form-control" }  %>
-  <%= f.button :submit, class: "btn btn-primary" %>
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#basic" data-toggle="tab">Basic</a></li>
+  <li><a href="#steps" data-toggle="tab">Steps</a></li>
+  <li><a href="#tips" data-toggle="tab">Tips</a></li>
+</ul>
+
+<%= simple_form_for @solution, html: { multipart: true } do |f| %>
+  <div class="tab-content">
+    <div class="tab-pane active" id="basic">
+      <%= render 'basic', f: f %>
+    </div>
+
+    <div class="tab-pane" id="steps">
+      <%= render 'steps' %>
+    </div>
+
+    <div class="tab-pane" id="tips">
+      <%= render 'tips', f: f %>
+    </div>
+  </div>
 <% end %>

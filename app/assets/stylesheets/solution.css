@@ -1,0 +1,9 @@
+#solution-carousel {
+  width: 300px;
+  height: 300px;
+}
+
+#solution-carousel .solution-photo {
+  text-align: center;
+  height: 300px !important;
+}

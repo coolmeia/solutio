@@ -1,5 +1,32 @@
 <h1><%= @solution.name %></h1>
 
+<% if @solution.photos.any? %>
+  <div id="solution-carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <% @solution.photos.each_with_index do |photo, index| %>
+        <li data-target="#carousel-example-generic" class="<%= "active" if index == 0 %>" data-slide-to="<%= index %>"></li>
+      <% end %>
+    </ol>
+
+    <div class="carousel-inner">
+      <% @solution.photos.each_with_index do |photo, index| %>
+        <div class="item <%= "active" if index == 0 %>">
+          <%= image_tag photo.image_url, class: "solution-photo" %>
+        </div>
+      <% end %>
+    </div>
+
+    <a class="left carousel-control" href="#solution-carousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#solution-carousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
+<% end %>
+
+<br>
+
 <p>
   <strong>Category:</strong> <%= @solution.category_humanize %>
 </p>

@@ -42,7 +42,7 @@ class SolutionsController < ApplicationController
   private
 
   def solution_params
-    params.require(:solution).permit(:name, :description, :category).merge({
+    params.require(:solution).permit(:name, :description, :category, :photos_attributes => [:id, :image, :_destroy, :image_cache]).merge({
       user_id: current_user.id
     })
   end
